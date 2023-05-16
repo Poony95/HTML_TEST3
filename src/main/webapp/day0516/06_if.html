@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function pro(){
+           var name = document.getElementById("name").value;
+           var kor = eval(document.getElementById("kor").value);
+           var eng = eval(document.getElementById("eng").value);
+           var math = eval(document.getElementById("math").value);
+
+           var sum = 0;
+           var avg = 0;
+           sum = kor+eng+math;
+           avg = sum/3;
+           
+            var result="";
+           
+           if(avg >= 100){
+                result = "A";
+           }
+           if(avg <= 80 && avg > 60){
+                result = "B";
+           }
+           if(avg <= 60 && avg > 40){
+                result = "C";
+           }
+           if(avg <= 40 && avg > 20){
+                result = "D";
+           }
+           if(avg <= 20){
+                result = "F";
+           }
+
+           document.getElementById("name").innerHTML = name;
+           document.getElementById("output").innerHTML = sum;
+           document.getElementById("output2").innerHTML = avg;
+           document.getElementById("output3").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+ <!--이름, 국어, 영어, 수학을 입력받아 총점과 평균을 구하여 출력하고
+평균에 따라 a,b,c,d,f를 판별하여 출력합니다. 화면 구성은 자유-->
+
+    <h1>점수 결과</h1>
+    이름 : <input type="text" id="name"><br>
+    국어 : <input type="text" id="kor"><br>
+    영어 : <input type="text" id="eng"><br>
+    수학 : <input type="text" id="math"><br>
+    <button onclick="pro()">확인하기</button><br>
+    <hr>
+    이름 : <span id="name"></span><br>
+    총점 : <span id="output"></span><br>
+    평균 : <span id="output2"></span><br>
+    등급 : <span id="output3"></span><br>
+
+</body>
+</html>

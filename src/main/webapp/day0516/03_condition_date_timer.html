@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="output">hello!</div>
+    <script>
+        // 반복실행하는 메소드 (함수, 시간)
+        setInterval(function(){
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            var date = today.getDate();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var second = today.getSeconds();
+
+            var output = document.getElementById("output");
+                var data = year+"년"+month+"월"+date+"일";
+                data = "<h2>"+data+hours+":"+minutes+":"+second+"</h2>";
+            output.innerHTML = data;
+        },1000);
+    </script>
+</body>
+</html>

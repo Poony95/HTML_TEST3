@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{width: 100px; height: 100px; position: absolute;}
+        .box:nth-child(1){
+            background: rgb(223, 82, 82);
+            left: 10px; top: 10px;
+        z-index: 100;}
+        .box:nth-child(2){
+            background: rgb(106, 210, 156);
+            left: 50px; top: 50px;}
+        .box:nth-child(3){
+            background: rgb(125, 125, 217); 
+            left: 90px; top: 90px;}
+        #wrap{ width: 400px; height: 100px;
+        border: 3px solid black; position: relative; overflow: scroll;}
+    </style>
+</head>
+<body>
+    <h1>hello HTML</h1>
+    <div id="wrap">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+    <h1>Hello CSS</h1>
+</body>
+</html>

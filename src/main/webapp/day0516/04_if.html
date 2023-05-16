@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" id="yogi">
+    <script>
+        var today = new Date();
+        var hours = today.getHours();
+        if(hours < 17){
+            
+            document.getElementById("yogi").src = "sun.png";
+            
+        }
+
+        if(hours >= 17){
+            document.getElementById("yogi").src = "moon.png";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var data = ['김연수','강현서','심유리','염혜원','이아현','정소희'];
+        function pro(){
+            var str = "<ul>";
+            for(i=0; i<data.length;i++){
+                var name = data[i];
+                str += "<li>"+name+"</li>";
+            }
+            str += "</ul>";
+            document.getElementById("list").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <h2>스케치업</h2>
+    <div id="list"></div>
+    <button onclick="pro()">출력하기</button>
+</body>
+</html>
